@@ -17,16 +17,51 @@
     <script src="./assets/js/app.js" type="module"></script>
   </head>
   <body>
-    <main>
-      <section class="input">
-        <form>
-          <input type="text" class="search" placeholder="words">
-          <input type="button" class="btn" value="Search">
-        </form>
-      </section>
-      <section class="content">
-
-      </section>
+    <main class="container grid grid-center">
+      <div class="section-group grid grid-center">
+        <section class="input">
+          <form>
+            <input type="text" class="search" placeholder="search words, phrase">
+            <input type="button" class="btn" value="Search">
+          </form>
+        </section>
+        <section class="content grid">
+          <div class="word-search">
+            <h3 class="search-word">Word</h3>
+            <h4>
+              [pu**sh] (in italics)
+              <span class="word-audio"><img src="./assets/img/search-01.png"></span>
+            </h4>            
+          </div>
+          <div class="meaning-category">
+            <div class="category grid">
+              <h3>noun</h3>
+              <div>
+                <ol>
+                  <li>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Beatae dolores voluptas mollitia pariatur veritatis rem 
+                      consequuntur quos optio ut in praesentium veniam perspiciatis 
+                      recusandae, molestias alias non atque assumenda sint.
+                    </p>
+                    <p class="example">Example 1 - in italics also</p>
+                  </li>
+                  <li>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Beatae dolores voluptas mollitia pariatur veritatis rem 
+                      consequuntur quos optio ut in praesentium veniam perspiciatis 
+                      recusandae, molestias alias non atque assumenda sint.
+                    </p>
+                    <p class="example">Example 2 - in italics also</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>  
+      </div>
     </main>
   </body>
 </html>

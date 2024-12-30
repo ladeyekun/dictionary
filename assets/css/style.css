@@ -7,6 +7,8 @@
 :root {
   --app-font-color: #f4f5f7;
   --app-background-color: #222;
+  --app-section-title-color: #6f41cf;
+  --app-section-bg-color: rgb(0 0 0 / 15%);
 
   --app-page-height: 100svh;
 }
@@ -16,7 +18,7 @@ a {
 }
 
 .container {
-  width: min(100% - 30px, 1200px);
+  width: min(100% - 30px, 920px);
   margin-inline: auto;
 }
 
@@ -32,6 +34,10 @@ body {
 
 .flex-between {
   justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
 }
 
 .grid {
@@ -74,6 +80,15 @@ body {
   display: inline;
 }
 
+main {
+  height: var(--app-page-height);
+}
+
+.section-group {
+  width: 100%;
+  gap: 40px;
+}
+
 .btn {
   padding: 0 20px;
   height: 46px;
@@ -84,4 +99,96 @@ body {
   border: 1px solid #6f41cf;
   font-size: 20px;
   font-weight: 400;
+}
+
+input[type="text"] {
+  padding: 0 20px 0 40px;
+  height: 46px;
+  border-radius: 5px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  font-size: 20px;
+  font-weight: 400;  
+  color: #fff;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+
+  input[type="text"] {
+    flex: 1;
+  }
+
+  input[type="button"] {
+    flex: 0 0 auto;
+  }
+
+}
+
+input[type="text"].search {
+  background: rgb(0 0 0 / 20%) url(../img/search-01.png) no-repeat 15px 15px;
+  background-size: 15px;
+  /*width: 400px;*/
+  margin-right: 5px;
+  flex: auto;
+}
+
+section.input {
+  width: 100%;
+}
+
+.content {
+  gap: 15px;
+}
+
+.word-search {
+  padding: 20px;
+  background-color: var(--app-section-bg-color);
+  border-radius: 4px;
+
+  .search-word {
+    color: var(--app-section-title-color);
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.category {
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--app-section-title-color);
+  }
+
+  padding: 20px;
+  gap: 10px;
+  background-color: var(--app-section-bg-color);
+  border-radius: 4px;
+
+  ol {
+    list-style-type: lower-roman;
+    counter-reset: item;
+    padding-left: 15px;
+
+    li::before {
+      position: absolute;
+      left: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 7px;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      p.example {
+        font-style: italic;
+        margin-top: 10px;
+      }
+    }
+  }
 }
